@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCodeDay1_TwoSum
 {
@@ -10,7 +6,17 @@ namespace LeetCodeDay1_TwoSum
     {
         public int[] TwoSum(int[] nums, int target)
         {
-            throw new NotImplementedException();
+            for (var i = 0; i < nums.Length; i++)
+            {
+                for (var j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        return new[] { i, j };
+                    }
+                }
+            }
+            throw new Exception("Not Work");
         }
     }
 }
